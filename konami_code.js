@@ -15,28 +15,25 @@ function init() {
   // your code here
   const main = document.body;
 
-  main.addEventListener('keydown', onKeyDownHandler);
+  main.addEventListener('keydown', // This is the function that would be invoked by the event listener.
+  function onKeyDownHandler(e) {
 
-}
+    // Keep track of index outside of the event handler.
+    let index = 0;
 
+    const key = e.key;
 
-// This is the function that would be invoked by the event listener.
-function onKeyDownHandler(e) {
+    if (key === codes[index]) {
+      index++;
 
-  // Keep track of index outside of the event handler.
-  let index = 0;
+      if (index === codes.length) {
+        alert("Congrats!");
 
-  const key = e.key;
-
-  if (key === codes[index]) {
-    index++;
-
-    if (index === codes.length) {
-      alert("Congrats!");
-
+        index = 0;
+      }
+    } else {
       index = 0;
     }
-  } else {
-    index = 0;
-  }
+  });
+
 }
