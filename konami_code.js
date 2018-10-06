@@ -15,8 +15,10 @@ function init() {
   // your code here
   const main = document.body;
 
-  main.addEventListener('keydown', function(event) {
+  main.addEventListener('keydown', function(e) {
 
-});
+    let index = 0;
+
+  });
 
 }
